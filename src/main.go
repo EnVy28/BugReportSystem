@@ -5,6 +5,10 @@ import (
 	"net/http"
 )
 
+type PageProp struct {
+	Title string
+}
+
 func main() {
 	//Specify that localhost/css is where the css files can be accessed, files coming from app/css
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("app/css"))))
@@ -16,6 +20,12 @@ func main() {
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("app/login.html")
-	t.Execute(w, r)
+	PP := PageProp{"Login Page"}
+
+	t, err := template.ParseFiles("app/login.html", "app/template/globalheads.html")
+	if err != nil {
+		panic(err.Error())
+	}
+
+	t.Execute(w, PP)
 }
