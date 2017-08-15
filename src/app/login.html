@@ -4,7 +4,18 @@
         {{template "globalheads"}}
     </head>
     <body>
-        <h3>Hello there!</h3>
+        <div id="login-wrapper">
+            <h1 class="">Log In</h1>
+            <h3>Please log in to continue</h3>
+            <table>
+                <tr><td>E-mail address</td></tr>
+                <tr><td><input type="text" /></td></tr>
+                <tr><td>Password</td></tr>
+                <tr><td><input type="password" /></td></tr>
+                <tr><td><input type="checkbox" />Remember me</td></tr>
+                <tr><td><input type="submit" value="Login" class="btn fz18px" /></td></tr>
+            </table>
+        </div>
     </body>
     <script>
     $(function(){
