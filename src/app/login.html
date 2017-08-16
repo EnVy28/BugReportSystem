@@ -2,19 +2,44 @@
     <head>
         <title>{{ .Title }}</title>
         {{template "globalheads"}}
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <script src="js/login.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
-        <div id="login-wrapper">
-            <h1 class="">Log In</h1>
-            <h3>Please log in to continue</h3>
-            <table>
-                <tr><td>E-mail address</td></tr>
-                <tr><td><input type="text" /></td></tr>
-                <tr><td>Password</td></tr>
-                <tr><td><input type="password" /></td></tr>
-                <tr><td><input type="checkbox" />Remember me</td></tr>
-                <tr><td><input type="submit" value="Login" class="btn fz18px" /></td></tr>
-            </table>
+        <div id="main-div" class="cf">
+            <div id="login-wrapper">
+                <h1 id="login-header">Log In</h1>
+                <h3>Please log in to continue</h3>
+                <table id="login-wrapper-table">
+                    <tr><td colspan="2">E-mail address</td></tr>
+                    <tr><td colspan="2"><input type="text" id="login-email-textbox" /></td></tr>
+                    <tr><td colspan="2">Password</td></tr>
+                    <tr><td colspan="2"><input type="password" id="login-password-textbox" /></td></tr>
+                    <tr><td colspan="2"><input type="checkbox" id="remember-me-checkbox" />Remember me</td></tr>
+                    <tr><td><input type="submit" value="Login" id="login-button" class="btn fz18px" /></td></tr>
+                </table>
+            </div>
+            <div id="register-wrapper">
+                <h1 id="register-header">Register</h1>
+                <h3>Create an account</h3>
+                <table id="register-wrapper-table">
+                    <tr><td colspan="2">Name<span class="red">*</span></td></tr>
+                    <tr><td colspan="2"><input type="text" id="register-name-textbox" /></td></tr>
+                    <tr><td colspan="2">Company<span class="red">*</span></td></tr>
+                    <tr><td colspan="2"><input type="text" id="register-company-textbox" /></td></tr>
+                    <tr><td colspan="2">E-mail address<span class="red">*</span></td></tr>
+                    <tr><td colspan="2"><input type="text" id="register-email-textbox" /></td></tr>
+                    <tr><td colspan="2">Password<span class="red">*</span></td></tr>
+                    <tr><td colspan="2"><input type="password" id="register-password-textbox" /></td></tr>
+                    <tr><td colspan="2">Confirm Password<span class="red">*</span></td></tr>
+                    <tr><td colspan="2"><input type="password" id="register-password-conf-textbox" /></td></tr>
+                    <tr><td colspan="2">&nbsp;</td></tr>
+                    <tr><td colspan="2"><div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div></td></tr>
+                    <tr><td colspan="2">&nbsp;</td></tr>
+                    <tr><td><input type="submit" value="Register" id="register-button" class="btn fz18px" /></td></tr>
+                </table>
+            </div>
         </div>
     </body>
     <script>

@@ -1,0 +1,48 @@
+@media screen and (max-width: 1921px) {
+    #main-div {
+        
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    #main-div {
+        
+    }
+}
+
+#main-div {
+    box-shadow: 0px 0px 30px #000000;
+    padding: 30px;
+}
+
+#login-wrapper {
+    float: left;
+    width: 300px;
+    margin-right: 10px;
+}
+
+#register-wrapper {
+    float: right;
+    width: 300px;
+    padding-left: 10px;
+    border-left: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#login-header,
+#register-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#login-wrapper-table,
+#register-wrapper-table {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type=text],
+input[type=password] {
+    font-size: 14px;
+    padding: 5px 3px;
+    box-sizing: border-box;
+    width: 100%;
+}
